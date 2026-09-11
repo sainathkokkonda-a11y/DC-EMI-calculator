@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global EMI Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="global-emi-container">
+  <div class="global-emi-card">
+    <div class="global-emi-header">
+      <h2>Global EMI Calculator</h2>
+      <p>Instant & Professional Loan Estimator</p>
+    </div>
+    
+    <div class="global-emi-body">
+      <!-- లోన్ అమౌంట్ -->
+      <div class="input-group">
+        <label>Loan Amount</label>
+        <div class="input-flex-wrapper">
+          <select class="currency-select" id="currencySymbol" onchange="calculateGlobalEMI()">
+            <option value="$">$ (USD)</option>
+            <option value="€">€ (EUR)</option>
+            <option value="£">£ (GBP)</option>
+            <option selected value="₹">₹ (INR)</option>
+            <option value="A$">A$ (AUD)</option>
+            <option value="C$">C$ (CAD)</option>
+            <option value="AED">AED</option>
+          </select>
+          <input class="global-input" id="loanAmount" type="number" value="1000000" oninput="calculateGlobalEMI()" />
+        </div>
+      </div>
+
+      <!-- వడ్డీ రేటు -->
+      <div class="input-group">
+        <label>Annual Interest Rate (%)</label>
+        <input class="global-input" id="interestRate" type="number" step="0.1" value="8.5" oninput="calculateGlobalEMI()" />
+      </div>
+
+      <!-- కాలపరిమితి (సంవత్సరాలు మరియు నెలలు) -->
+      <div class="input-group">
+        <label>Loan Tenure</label>
+        <div class="tenure-flex">
+          <div class="tenure-box">
+            <input class="global-input" id="tenureYears" type="number" min="0" value="5" placeholder="Years" oninput="calculateGlobalEMI()" />
+            <span style="font-size: 11px; color: #1565c0; font-weight: 600;">Years</span>
+          </div>
+          <div class="tenure-box">
+            <input class="global-input" id="tenureMonths" type="number" min="0" max="11" value="0" placeholder="Months" oninput="calculateGlobalEMI()" />
+            <span style="font-size: 11px; color: #1565c0; font-weight: 600;">Months</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ప్రాసెసింగ్ ఫీజు -->
+      <div class="input-group">
+        <label>Processing Fee (%) [Optional]</label>
+        <input class="global-input" id="processingFee" type="number" step="0.1" value="1" oninput="calculateGlobalEMI()" />
+      </div>
+
+      <!-- ఫలితాల బాక్స్ -->
+      <div class="result-box">
+        <div class="result-item highlight-emi">
+          <span class="result-label">Monthly Payment (EMI):</span>
+          <span class="result-value" id="monthlyEMI">0</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">Principal Amount:</span>
+          <span class="result-value" id="principalAmount">0</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">Total Interest Payable:</span>
+          <span class="result-value" id="totalInterest">0</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">Processing Fee:</span>
+          <span class="result-value" id="procFeeAmount">0</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">Total Payment:</span>
+          <span class="result-value" id="totalPayment">0</span>
+        </div>
+
+        <div class="progress-bar-container">
+          <div class="progress-principal" id="barPrincipal" style="width: 50%;"></div>
+          <div class="progress-interest" id="barInterest" style="width: 50%;"></div>
+        </div>
+        <div class="legend-box">
+          <span>■ Principal</span>
+          <span>■ Interest</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
