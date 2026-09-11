@@ -1,0 +1,170 @@
+.global-emi-container {
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.global-emi-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 480px;
+  margin: 20px auto;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(13, 71, 161, 0.15);
+  border: 2px solid #1976d2;
+  overflow: hidden;
+}
+
+.global-emi-header {
+  background: linear-gradient(135deg, #0d47a1, #1976d2);
+  color: #ffffff;
+  padding: 24px 20px;
+  text-align: center;
+}
+
+.global-emi-header h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.global-emi-header p {
+  margin: 6px 0 0 0;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.global-emi-body {
+  padding: 24px 20px;
+}
+
+.input-group {
+  margin-bottom: 18px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #0d47a1;
+  margin-bottom: 6px;
+}
+
+.input-flex-wrapper {
+  display: flex;
+  gap: 8px;
+}
+
+.currency-select {
+  padding: 12px;
+  font-size: 15px;
+  border: 2px solid #bbdefb;
+  border-radius: 8px;
+  outline: none;
+  background-color: #e3f2fd;
+  color: #0d47a1;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.global-input {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 16px;
+  border: 2px solid #bbdefb;
+  border-radius: 8px;
+  outline: none;
+  color: #0d47a1;
+  font-weight: 600;
+}
+
+.global-input:focus, .currency-select:focus {
+  border-color: #1976d2;
+}
+
+.tenure-flex {
+  display: flex;
+  gap: 10px;
+}
+
+.tenure-box {
+  flex: 1;
+}
+
+.result-box {
+  margin-top: 22px;
+  background: #e3f2fd;
+  border-radius: 12px;
+  padding: 18px;
+  border: 1px solid #90caf9;
+}
+
+.result-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px dashed #90caf9;
+}
+
+.result-item:last-child {
+  border-bottom: none;
+}
+
+.result-label {
+  font-size: 13px;
+  color: #1565c0;
+  font-weight: 600;
+}
+
+.result-value {
+  font-size: 15px;
+  color: #0d47a1;
+  font-weight: 700;
+}
+
+.highlight-emi {
+  background: #1976d2;
+  color: #ffffff;
+  padding: 14px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.highlight-emi .result-label {
+  color: #bbdefb;
+}
+
+.highlight-emi .result-value {
+  color: #ffffff;
+  font-size: 21px;
+}
+
+.progress-bar-container {
+  margin-top: 15px;
+  background: #bbdefb;
+  border-radius: 6px;
+  height: 12px;
+  display: flex;
+  overflow: hidden;
+}
+
+.progress-principal {
+  background: #0d47a1;
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+.progress-interest {
+  background: #42a5f5;
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+.legend-box {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  margin-top: 5px;
+  color: #0d47a1;
+  font-weight: 600;
+}
